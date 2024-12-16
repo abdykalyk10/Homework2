@@ -163,7 +163,7 @@ class Magic(Hero):
         if self.rounds_boost_used < 4 and self.health > 0:
             attack_boost = randint(1, 5)
             for hero in heroes:
-                if hero.health > 0 and not isinstance(hero, Witcher):  # Не усиливаем Witcher
+                if hero.health > 0 and not isinstance(hero, Witcher):
                     hero.damage += attack_boost
             self.rounds_boost_used += 1
             print(f'Маг усилила атаку всех героев на {attack_boost} в раунде {round_number}')
