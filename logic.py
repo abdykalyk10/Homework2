@@ -18,16 +18,15 @@ def play_game(min_number, max_number, attempts, starting_capital):
             print("Недостаточно монет для такой ставки.")
             continue
 
-        # Генерация случайного числа
         random_number = random.randint(min_number, max_number)
         guess = int(input(f"Угадайте число от {min_number} до {max_number}: "))
 
         if guess == random_number:
             print(f"Поздравляю! Вы угадали число {random_number}.")
-            capital += bet  # Удваиваем ставку
+            capital += bet
         else:
             print(f"Увы, вы не угадали. Загаданное число было {random_number}.")
-            capital -= bet  # Потеряна ставка
+            capital -= bet
 
         if capital <= 0:
             print("У вас больше нет монет. Игра завершена.")
